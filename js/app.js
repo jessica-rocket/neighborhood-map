@@ -260,7 +260,7 @@ var styles = [
       }
     ]
   }
-]
+];
 //Adding global variables
 var map;
 
@@ -363,7 +363,7 @@ var AppViewModel = function() {
 	}, self);
 
 	self.mapElem = document.getElementById('map');
-}
+};
 
 //error handling
 function mapError(){
