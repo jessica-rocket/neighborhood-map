@@ -3,6 +3,7 @@
   <head>
     <title>Austin Eats</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <div class id="app">
@@ -11,17 +12,17 @@
       </div>
       <div class id="list">
         <ul class id="results" data-bind="foreach: filteredList">
-          <li class id="restaraunts" data-bind="text: name"></li>
+          <li class id="restaraunts" data-bind="text: name, click: bounce"></li>
         </ul>
       </div>
     </div>
     <div class id="map">
     </div>
+    <script src="js/app.js"></script>
     <script src="js/knockout.js"></script>
     <script src="js/jquery.min.js"></script>
     <script async defer
         src=
-        "https://maps.googleapis.com/maps/api/js?libraries=places,geometry,drawing&key=AIzaSyAdLhLGO71QY7amWX45t_YiO4jgHdWaPDU&v=3&callback=startApp" ></script>
-    <script src="js/app.js"></script>
+        "https://maps.googleapis.com/maps/api/js?libraries=places,geometry,drawing&key=AIzaSyAdLhLGO71QY7amWX45t_YiO4jgHdWaPDU&v=3&callback=startApp" onerror="mapError()" ></script>
   </body>
 </html>
