@@ -242,7 +242,7 @@ var Location = function(data) {
         }, 1500);
     });
 
-    this.bounce = function(restaraunts) {
+    this.clickedList = function(restaraunts) {
         google.maps.event.trigger(self.marker, 'click');
     };
 };
